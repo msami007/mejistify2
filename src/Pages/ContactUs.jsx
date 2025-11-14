@@ -10,7 +10,7 @@ const ContactUs = () => {
         </h1>
         <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 rounded-full"></div>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          We're here to help you with any questions about our products, services, or your orders. 
+          We're here to help you with any questions about our products, services, or your orders.
           Reach out to us and we'll get back to you promptly.
         </p>
       </div>
@@ -27,7 +27,7 @@ const ContactUs = () => {
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Start a Conversation</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Whether you have questions about our products, need support with an order, 
+                Whether you have questions about our products, need support with an order,
                 or want to explore partnership opportunities, we're here to help.
               </p>
             </div>
@@ -41,8 +41,9 @@ const ContactUs = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Our Office</h3>
                   <p className="text-gray-700">
-                    5900 BALCONES DR STE 19007<br />
-                    AUSTIN, TX 78731
+                    30 N Gould Ste 40990 <br />
+                    Sheridan, WY 82801 <br />
+                    USA
                   </p>
                 </div>
               </div>
@@ -56,10 +57,7 @@ const ContactUs = () => {
                   <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
                   <div className="space-y-2">
                     <p className="text-gray-700">
-                      <span className="font-medium">USA:</span> +1 (512) 543-0711
-                    </p>
-                    <p className="text-gray-700">
-                      <span className="font-medium">Pakistan:</span> +92 325 9727004
+                      <span className="font-medium">Pakistan:</span> 330 2090637
                     </p>
                   </div>
                 </div>
@@ -234,7 +232,7 @@ const ContactUs = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Directions</h3>
                 <p className="text-gray-600 mb-6">
-                  Located in the heart of Austin, our office is easily accessible 
+                  Located in the heart of Austin, our office is easily accessible
                   with ample parking and public transportation options.
                 </p>
               </div>
@@ -249,11 +247,11 @@ const ContactUs = () => {
                   <span>🗺️</span>
                   Get Directions
                 </a>
-                
+
                 <div className="bg-gray-50 rounded-2xl p-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Parking Information</h4>
                   <p className="text-gray-600 text-sm">
-                    Free parking available in the building garage. Visitor spots 
+                    Free parking available in the building garage. Visitor spots
                     are located on levels 1-3.
                   </p>
                 </div>
@@ -272,7 +270,7 @@ const ContactUs = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+15125430711"
+              href="tel:330 2090637"
               className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-200 shadow-lg"
             >
               📞 Call Now

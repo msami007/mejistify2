@@ -28,7 +28,7 @@ const Footer = () => {
   };
 
   return (
-  <footer className="bg-[#0b3d91] text-white py-10 px-6 md:px-16">
+    <footer className="bg-[#0b3d91] text-white py-10 px-6 md:px-16">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 border-b border-gray-700 pb-10">
         {/* Brand Info */}
         <div className="space-y-4">
@@ -39,11 +39,13 @@ const Footer = () => {
           />
           <div className="flex items-start gap-2">
             <MapPin size={18} className="mt-1 text-[#f9b233]" />
-            <p>30 N Gould Ste 40990 Sheridan, WY 82801</p>
+            <p>30 N Gould Ste 40990
+              Sheridan, WY 82801
+              USA</p>
           </div>
           <div className="flex items-center gap-2">
             <Phone size={18} className="text-[#f9b233]" />
-            <p>+1 (512) 5430711</p>
+            <p>+330 2090637</p>
           </div>
           <div className="flex items-center gap-2">
             <Mail size={18} className="text-[#f9b233]" />
@@ -85,8 +87,8 @@ const Footer = () => {
             <li><a href="/contactus" className="hover:text-[#f9b233]">Contact Us</a></li>
             <li><a href="/aboutus" className="hover:text-[#f9b233]">About Us</a></li>
             <li>
-              <Link 
-                to="/privacypolicy" 
+              <Link
+                to="/privacypolicy"
                 className="hover:text-[#f9b233]"
                 onClick={handleLinkClick}
               >
@@ -94,8 +96,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/returnsrefund" 
+              <Link
+                to="/returnsrefund"
                 className="hover:text-[#f9b233]"
                 onClick={handleLinkClick}
               >
@@ -103,8 +105,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/termsofservice" 
+              <Link
+                to="/termsofservice"
                 className="hover:text-[#f9b233]"
                 onClick={handleLinkClick}
               >
@@ -112,8 +114,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link 
-                to="/paymentprocess" 
+              <Link
+                to="/paymentprocess"
                 className="hover:text-[#f9b233]"
                 onClick={handleLinkClick}
               >
