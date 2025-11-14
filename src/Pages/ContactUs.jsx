@@ -1,6 +1,24 @@
 import React from "react";
 
 const ContactUs = () => {
+  const [form, setForm] = React.useState({ first: '', last: '', email: '', phone: '', subject: 'General Inquiry', msg: '' });
+
+  const submitForm = async (e) => {
+  e.preventDefault();
+  await fetch("https://mejistify.com/api/send-contact.php",{
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body:JSON.stringify({
+      firstName: form.first,
+      lastName: form.last,
+      email: form.email,
+      phone: form.phone,
+      subject: form.subject,
+      message: form.msg
+    })
+  });
+  alert("Message sent!");
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8 font-sans">
       {/* Header Section */}
@@ -116,11 +134,12 @@ const ContactUs = () => {
               </p>
             </div>
 
-            <form className="space-y-6">
+            <form onSubmit={submitForm} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700">First Name *</label>
                   <input
+                    onChange={e=>setForm({...form, first:e.target.value})}
                     type="text"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -130,6 +149,7 @@ const ContactUs = () => {
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700">Last Name *</label>
                   <input
+                    onChange={e=>setForm({...form, last:e.target.value})}
                     type="text"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -141,6 +161,7 @@ const ContactUs = () => {
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">Email Address *</label>
                 <input
+                  onChange={e=>setForm({...form, email:e.target.value})}
                   type="email"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -151,6 +172,7 @@ const ContactUs = () => {
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">Phone Number</label>
                 <input
+                  onChange={e=>setForm({...form, phone:e.target.value})}
                   type="tel"
                   className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   placeholder="+1 (555) 123-4567"
@@ -159,7 +181,10 @@ const ContactUs = () => {
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">Subject *</label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                <select className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  onChange={e=>setForm({...form, subject:e.target.value})}
+                >
+                  
                   <option>General Inquiry</option>
                   <option>Product Information</option>
                   <option>Order Support</option>
@@ -171,6 +196,7 @@ const ContactUs = () => {
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">Message *</label>
                 <textarea
+                  onChange={e=>setForm({...form, msg:e.target.value})}
                   required
                   rows="6"
                   className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
